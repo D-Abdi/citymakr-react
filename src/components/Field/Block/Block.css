@@ -1,0 +1,189 @@
+.block {
+  position: absolute;
+  transform-origin: center center;
+  z-index: 120;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.base {
+    transform: translate(48%, 48%);
+    position: absolute;
+    width: 50px;
+    z-index: 100;
+    height: 50px;
+    top: 0;
+    border: 1px solid red;
+    transform-origin: center center;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.arrow {
+    position: absolute;
+    transform: translate(20%, -150%) rotate(180deg);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: #e8e8f3;
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    background: url("https://bassets.github.io/arrow.svg") no-repeat 50%/50% #e8e8f3;
+    opacity: 1;
+    transition: 0.25s ease all;
+}
+
+.sub-container {
+    z-index: 10;
+    transform: translateY(250%) translateX(-35%);
+    height: 50px;
+    width: 300px;
+}
+
+.circle-container {
+    transform-origin: 50px 50px;
+    z-index: 100;
+}
+
+.circle {
+	position: absolute;
+	padding: 0;
+    margin: 1em auto;
+	width: 10em;
+    height: 10em;
+    transform: translate(-20%, -30%) rotate(-14deg);
+	border-radius: 50%;
+	list-style: none;
+    overflow: hidden;
+    box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+    -7px -7px 20px rgba(255, 255, 255, 1),
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+    inset 7px 7px 15px rgba(55, 84, 170, 0),
+    inset -7px -7px 20px rgba(255, 255, 255, 0),
+    0px 0px 4px rgba(255, 255, 255, 0);
+}
+
+li {
+    cursor: pointer;
+	overflow: hidden;
+	position: absolute;
+	top: 0; right: 0;
+	width: 50%; height: 50%;
+	transform-origin: 0% 100%;      
+}
+.text {
+	position: absolute;
+	left: -100%;
+	width: 200%; height: 200%;
+	text-align: center;
+    -webkit-transform: skewY(60deg) rotate(15deg);
+    -ms-transform: skewY(60deg) rotate(15deg);
+    transform: skewY(60deg) rotate(15deg);
+    padding-top: 20px;
+}
+
+li:first-child {
+    -webkit-transform: rotate(0deg) skewY(-60deg);
+    -ms-transform: rotate(0deg) skewY(-60deg);
+	transform: rotate(0deg) skewY(-60deg);     
+}
+li:nth-child(2) {
+    -webkit-transform: rotate(30deg) skewY(-60deg);
+    -ms-transform: rotate(30deg) skewY(-60deg);
+	transform: rotate(30deg) skewY(-60deg);     
+}
+li:nth-child(3) {
+    -webkit-transform: rotate(60deg) skewY(-60deg);
+    -ms-transform: rotate(60deg) skewY(-60deg);
+	transform: rotate(60deg) skewY(-60deg);    
+}
+li:nth-child(4) {
+    -webkit-transform: rotate(90deg) skewY(-60deg);
+    -ms-transform: rotate(90deg) skewY(-60deg);
+	transform: rotate(90deg) skewY(-60deg);    
+}
+li:nth-child(5) {
+    -webkit-transform: rotate(120deg) skewY(-60deg);
+    -ms-transform: rotate(120deg) skewY(-60deg);
+	transform: rotate(120deg) skewY(-60deg);    
+}
+li:nth-child(6) {
+    -webkit-transform: rotate(150deg) skewY(-60deg);
+    -ms-transform: rotate(150deg) skewY(-60deg);
+	transform: rotate(150deg) skewY(-60deg);    
+}
+li:nth-child(7) {
+    -webkit-transform: rotate(180deg) skewY(-60deg);
+    -ms-transform: rotate(180deg) skewY(-60deg);
+	transform: rotate(180deg) skewY(-60deg);    
+}
+li:nth-child(8) {
+    -webkit-transform: rotate(210deg) skewY(-60deg);
+    -ms-transform: rotate(210deg) skewY(-60deg);
+	transform: rotate(210deg) skewY(-60deg);    
+}
+li:nth-child(9) {
+    -webkit-transform: rotate(240deg) skewY(-60deg);
+    -ms-transform: rotate(240deg) skewY(-60deg);
+	transform: rotate(240deg) skewY(-60deg);    
+}
+li:nth-child(10) {
+    -webkit-transform: rotate(270deg) skewY(-60deg);
+    -ms-transform: rotate(270deg) skewY(-60deg);
+	transform: rotate(270deg) skewY(-60deg);    
+}
+li:nth-child(11) {
+    -webkit-transform: rotate(300deg) skewY(-60deg);
+    -ms-transform: rotate(300deg) skewY(-60deg);
+	transform: rotate(300deg) skewY(-60deg);    
+}
+li:nth-child(12) {
+    -webkit-transform: rotate(330deg) skewY(-60deg);
+    -ms-transform: rotate(330deg) skewY(-60deg);
+	transform: rotate(330deg) skewY(-60deg);    
+}
+li:first-child .text {
+    background: #e8e8f3; 
+}
+li:nth-child(2) .text {
+	background: #e8e8f3;  
+
+}
+li:nth-child(3) .text {
+    background: #e8e8f3;  
+}
+li:nth-child(4) .text {
+	background: #e8e8f3;  
+ 
+}
+li:nth-child(5) .text {
+    background: #e8e8f3;  
+}
+li:nth-child(6) .text {
+    background: #e8e8f3;  
+}
+li:nth-child(7) .text {
+	background: #e8e8f3;  
+
+}
+li:nth-child(8) .text {
+    background: #e8e8f3;  
+}
+li:nth-child(9) .text {
+    background: #e8e8f3;  
+}
+li:nth-child(10) .text {
+	background: #e8e8f3;  
+ 
+}
+li:nth-child(11) .text {
+	background: #e8e8f3;  
+
+}
+li:nth-child(12) .text {
+    background: #818188;  
+}

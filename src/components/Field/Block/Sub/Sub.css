@@ -1,0 +1,19 @@
+.sub {
+    cursor: pointer;
+    background: #e8e8f3;
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
+      -7px -7px 20px rgba(255, 255, 255, 1),
+      inset 0px 0px 4px rgba(255, 255, 255, 0.2),
+      inset 7px 7px 15px rgba(55, 84, 170, 0),
+      inset -7px -7px 20px rgba(255, 255, 255, 0),
+      0px 0px 4px rgba(255, 255, 255, 0);
+    opacity: 1;
+    transition: 0.25s ease all;
+}
+
+.s2 {
+   transform: translateY(150%); 
+}
