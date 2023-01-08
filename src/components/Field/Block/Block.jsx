@@ -3,17 +3,22 @@ import React, { useEffect, useState } from 'react';
 import uniqid from "uniqid";
 import { Sub } from "./Sub/Sub";
 
-const Block = ({id, x, y, remove}) => {
+const Block = ({id, x, y, remove, select}) => {
     const [rotation, setRotation] = useState(0);
 
     useEffect(() => {
         const block = document.getElementById(id)
         block.style.left = x + "px";
         block.style.top = y + "px";
-    }, [remove])
+    }, [remove, x, y, id])
 
     const removeBlock = () => {
         remove(id)
+    }
+
+    const subTypeEventHandler = (position, id, icon) => {
+        console.log(position, id, icon, "Kanker");
+        select(position, id, icon)
     }
 
     const rotateBlock = (newRotation) => {
@@ -26,7 +31,7 @@ const Block = ({id, x, y, remove}) => {
 
     return (
         <div className="block" id={id}>
-            <div className="arrow"></div>
+            <div className="arrow" style={{color: "black"}}></div>
             <div className="base" onClick={() => removeBlock()}></div>
             <div className="circle-container" id={`c-${id}`}>
                 <ul className="circle">
@@ -45,9 +50,9 @@ const Block = ({id, x, y, remove}) => {
                 </ul>
             </div>
             <div className="sub-container flex justify-between">
-               <Sub position={0} id={uniqid()}/>
-               <Sub position={1} id={uniqid()}/>
-               <Sub position={2} id={uniqid()}/>
+               <Sub position={0} id={uniqid()} icon={"tree"} subTypeEvent={(position, id, icon) => subTypeEventHandler(position, id, icon)}/>
+               <Sub position={1} id={uniqid()} icon={"building"}/>
+               <Sub position={2} id={uniqid()} icon={"road"}/>
             </div>
         </div>
     )
