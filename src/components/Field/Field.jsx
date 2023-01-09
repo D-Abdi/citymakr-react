@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import uniqid from "uniqid";
 import Block from "./Block/Block";
 
-const Field = () => {
+const Field = ({socket}) => {
   const [blockArray, setBlockArray] = useState([]);
 
   useEffect(() => {
@@ -12,9 +12,8 @@ const Field = () => {
 
   const addBlock = (event) => {
     const classArray = Object.values(event.target.classList);
-    console.log(classArray);
-    console.log(event.target.id, "ID");
     const baseIsPresent = Boolean(classArray.find(item => item === "base" || item === "text" || item === "flex"));
+    console.log(classArray, "Class")
     if (!event.target.id && !baseIsPresent) {
       setBlockArray((prev) => [
         ...prev,
@@ -30,7 +29,8 @@ const Field = () => {
   }
 
   const subTypeSelectHandler = (position, id, icon) => {
-    
+    console.log(socket, "SOCKET");
+    socket.emit("place-event", {position: position, id: id, icon: icon})
   }
 
   return (

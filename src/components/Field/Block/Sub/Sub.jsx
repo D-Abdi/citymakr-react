@@ -7,7 +7,7 @@ export const Sub = ({position, id, icon, subTypeEvent}) => {
     }, [id, position])
 
     const emitSubTypeEvent = () => {
-      subTypeEvent(position, id, icon)
+      subTypeEvent(id, icon)
     } 
 
     return (

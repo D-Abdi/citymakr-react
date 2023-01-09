@@ -16,9 +16,8 @@ const Block = ({id, x, y, remove, select}) => {
         remove(id)
     }
 
-    const subTypeEventHandler = (position, id, icon) => {
-        console.log(position, id, icon, "Kanker");
-        select(position, id, icon)
+    const subTypeEventHandler = (id, icon) => {
+        select({x, y}, id, icon)
     }
 
     const rotateBlock = (newRotation) => {
@@ -50,9 +49,9 @@ const Block = ({id, x, y, remove, select}) => {
                 </ul>
             </div>
             <div className="sub-container flex justify-between">
-               <Sub position={0} id={uniqid()} icon={"tree"} subTypeEvent={(position, id, icon) => subTypeEventHandler(position, id, icon)}/>
-               <Sub position={1} id={uniqid()} icon={"building"}/>
-               <Sub position={2} id={uniqid()} icon={"road"}/>
+               <Sub position={0} id={uniqid()} icon={"tree"} subTypeEvent={(id, icon) => subTypeEventHandler(id, icon)}/>
+               <Sub position={1} id={uniqid()} icon={"building"} subTypeEvent={(id, icon) => subTypeEventHandler(id, icon)}/>
+               <Sub position={2} id={uniqid()} icon={"road"} subTypeEvent={(id, icon) => subTypeEventHandler(id, icon)}/>
             </div>
         </div>
     )
