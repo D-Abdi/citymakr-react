@@ -29,8 +29,6 @@ const App = () => {
 
   return (
     <div>
-      <p>Connected: {"" + isConnected}</p>
-      <p>Socket ID: {socketID || "-"}</p>
       <Field socket={socket} />
     </div>
   );

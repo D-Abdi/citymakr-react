@@ -2,7 +2,6 @@ import "./Sub.css";
 import React, { useEffect } from "react";
 
 export const Sub = ({position, id, icon, subTypeEvent}) => {
-    console.log(icon);
     useEffect(() => {
     }, [id, position])
 
